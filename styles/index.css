@@ -1,0 +1,47 @@
+@CHARSET "UTF-8";
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    /* Margin bottom by footer height */
+    margin-bottom: 40px;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    /* Set the fixed height of the footer here */
+    height: 40px;
+    background-color: #f5f5f5;
+}
+
+.row-centered {
+    text-align:center;
+}
+
+.examples div {
+    margin-top: 1em;
+}
+
+.examples img {
+    border: 0.4em solid black;
+    border-radius: 2em;
+    margin: auto auto;
+    opacity: 0.7;
+}
+
+.examples img:hover {
+    opacity: 1;
+}
+
+/*
+.col-centered {
+    display:inline-block;
+    float:none;
+    text-align:left;
+    margin-right:-4px;
+}
+*/

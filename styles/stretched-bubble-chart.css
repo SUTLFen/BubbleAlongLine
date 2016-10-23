@@ -1,0 +1,19 @@
+svg {
+    background-color: #f5f5f5;
+}
+
+#chart {
+    height: 400px;
+}
+
+.axis line, .axis path {
+    fill: none;
+    stroke: #000;
+}
+
+.axis text {
+    font-size: 12px;
+}
+.bubble-node, .text-cursor{
+    cursor: pointer;
+}

@@ -1,0 +1,597 @@
+var keywordSet = [
+  {
+    "frequency": 0.0014,
+    "riqi": "1?，?",
+    "word": "9.1.4"
+  },
+  {
+    "frequency": 0.0011,
+    "riqi": "1?，?",
+    "word": "Opertunity"
+  },
+  {
+    "frequency": 9.0E-4,
+    "riqi": "1?，?",
+    "word": "Zagreb"
+  },
+  {
+    "frequency": 9.0E-4,
+    "riqi": "1?，?",
+    "word": "Biglietteria"
+  },
+  {
+    "frequency": 8.0E-4,
+    "riqi": "1?，?",
+    "word": "croazia"
+  },
+  {
+    "frequency": 8.0E-4,
+    "riqi": "1?，?",
+    "word": "aerea"
+  },
+  {
+    "frequency": 7.0E-4,
+    "riqi": "1?，?",
+    "word": "pushing"
+  },
+  {
+    "frequency": 6.0E-4,
+    "riqi": "1?，?",
+    "word": "MONEY"
+  },
+  {
+    "frequency": 6.0E-4,
+    "riqi": "1?，?",
+    "word": "gennaio"
+  },
+  {
+    "frequency": 6.0E-4,
+    "riqi": "1?，?",
+    "word": "Qatar-"
+  },
+  {
+    "frequency": 0,
+    "riqi": "2?，?",
+    "word": "Olimpia"
+  },
+  {
+    "frequency": 0,
+    "riqi": "2?，?",
+    "word": "Marcon"
+  },
+  {
+    "frequency": 0,
+    "riqi": "2?，?",
+    "word": "flaws"
+  },
+  {
+    "frequency": 0,
+    "riqi": "2?，?",
+    "word": "routers"
+  },
+  {
+    "frequency": 0,
+    "riqi": "2?，?",
+    "word": "default"
+  },
+  {
+    "frequency": 0,
+    "riqi": "2?，?",
+    "word": "polluce"
+  },
+  {
+    "frequency": 0,
+    "riqi": "2?，?",
+    "word": "Unhackable"
+  },
+  {
+    "frequency": 0,
+    "riqi": "2?，?",
+    "word": "Breakthrough"
+  },
+  {
+    "frequency": 0,
+    "riqi": "2?，?",
+    "word": "Serbia"
+  },
+  {
+    "frequency": 9.0E-4,
+    "riqi": "3?，?",
+    "word": "march"
+  },
+  {
+    "frequency": 8.0E-4,
+    "riqi": "3?，?",
+    "word": "SyScan'14"
+  },
+  {
+    "frequency": 7.0E-4,
+    "riqi": "3?，?",
+    "word": "Uzbeki"
+  },
+  {
+    "frequency": 7.0E-4,
+    "riqi": "3?，?",
+    "word": "(CSDN1"
+  },
+  {
+    "frequency": 7.0E-4,
+    "riqi": "3?，?",
+    "word": "CSDN2)"
+  },
+  {
+    "frequency": 6.0E-4,
+    "riqi": "3?，?",
+    "word": "23/03/2014"
+  },
+  {
+    "frequency": 6.0E-4,
+    "riqi": "3?，?",
+    "word": "international"
+  },
+  {
+    "frequency": 5.0E-4,
+    "riqi": "3?，?",
+    "word": "9.2"
+  },
+  {
+    "frequency": 5.0E-4,
+    "riqi": "3?，?",
+    "word": "SELLIG"
+  },
+  {
+    "frequency": 5.0E-4,
+    "riqi": "3?，?",
+    "word": "HTEmail...."
+  },
+  {
+    "frequency": 0.001,
+    "riqi": "4?，?",
+    "word": "Bahrain"
+  },
+  {
+    "frequency": 0.001,
+    "riqi": "4?，?",
+    "word": "Heartbleed"
+  },
+  {
+    "frequency": 0.001,
+    "riqi": "4?，?",
+    "word": "?????:"
+  },
+  {
+    "frequency": 8.0E-4,
+    "riqi": "4?，?",
+    "word": "targeting"
+  },
+  {
+    "frequency": 8.0E-4,
+    "riqi": "4?，?",
+    "word": "Tshirts"
+  },
+  {
+    "frequency": 8.0E-4,
+    "riqi": "4?，?",
+    "word": "Honduras"
+  },
+  {
+    "frequency": 7.0E-4,
+    "riqi": "4?，?",
+    "word": "03/06/2014"
+  },
+  {
+    "frequency": 7.0E-4,
+    "riqi": "4?，?",
+    "word": "Hera/training"
+  },
+  {
+    "frequency": 7.0E-4,
+    "riqi": "4?，?",
+    "word": "dhabi"
+  },
+  {
+    "frequency": 7.0E-4,
+    "riqi": "4?，?",
+    "word": "aprile"
+  },
+  {
+    "frequency": 0.0012,
+    "riqi": "5?，?",
+    "word": "compagni"
+  },
+  {
+    "frequency": 0.0011,
+    "riqi": "5?，?",
+    "word": "Situation"
+  },
+  {
+    "frequency": 0.001,
+    "riqi": "5?，?",
+    "word": "Bahrain"
+  },
+  {
+    "frequency": 8.0E-4,
+    "riqi": "5?，?",
+    "word": "traferta"
+  },
+  {
+    "frequency": 7.0E-4,
+    "riqi": "5?，?",
+    "word": "Tender:"
+  },
+  {
+    "frequency": 7.0E-4,
+    "riqi": "5?，?",
+    "word": "<<#1520870-45996994#>>"
+  },
+  {
+    "frequency": 6.0E-4,
+    "riqi": "5?，?",
+    "word": "GENDARMERIA"
+  },
+  {
+    "frequency": 6.0E-4,
+    "riqi": "5?，?",
+    "word": "solution\"\""
+  },
+  {
+    "frequency": 6.0E-4,
+    "riqi": "5?，?",
+    "word": "completely"
+  },
+  {
+    "frequency": 6.0E-4,
+    "riqi": "5?，?",
+    "word": "intercept.\""
+  },
+  {
+    "frequency": 0.0016,
+    "riqi": "6?，?",
+    "word": "Martina"
+  },
+  {
+    "frequency": 0.0016,
+    "riqi": "6?，?",
+    "word": "#6"
+  },
+  {
+    "frequency": 0.0016,
+    "riqi": "6?，?",
+    "word": "Shakacon"
+  },
+  {
+    "frequency": 0.0016,
+    "riqi": "6?，?",
+    "word": "Fuck"
+  },
+  {
+    "frequency": 0.0016,
+    "riqi": "6?，?",
+    "word": "Team"
+  },
+  {
+    "frequency": 0.0016,
+    "riqi": "6?，?",
+    "word": "presentation:"
+  },
+  {
+    "frequency": 0.0016,
+    "riqi": "6?，?",
+    "word": "Love."
+  },
+  {
+    "frequency": 0.0016,
+    "riqi": "6?，?",
+    "word": "Benvenuta"
+  },
+  {
+    "frequency": 0.0012,
+    "riqi": "6?，?",
+    "word": "Portugal"
+  },
+  {
+    "frequency": 0.0012,
+    "riqi": "6?，?",
+    "word": "spalla"
+  },
+  {
+    "frequency": 0.0015,
+    "riqi": "7?，?",
+    "word": "super"
+  },
+  {
+    "frequency": 0.001,
+    "riqi": "7?，?",
+    "word": "correlation"
+  },
+  {
+    "frequency": 0.001,
+    "riqi": "7?，?",
+    "word": "Vulnerabilita'"
+  },
+  {
+    "frequency": 0.001,
+    "riqi": "7?，?",
+    "word": "Santiago"
+  },
+  {
+    "frequency": 9.0E-4,
+    "riqi": "7?，?",
+    "word": "Quotation-"
+  },
+  {
+    "frequency": 9.0E-4,
+    "riqi": "7?，?",
+    "word": "00509027"
+  },
+  {
+    "frequency": 9.0E-4,
+    "riqi": "7?，?",
+    "word": "Sul"
+  },
+  {
+    "frequency": 9.0E-4,
+    "riqi": "7?，?",
+    "word": "AZ"
+  },
+  {
+    "frequency": 8.0E-4,
+    "riqi": "7?，?",
+    "word": "Elearning"
+  },
+  {
+    "frequency": 8.0E-4,
+    "riqi": "7?，?",
+    "word": "ANFOS"
+  },
+  {
+    "frequency": 0.0035,
+    "riqi": "8?，?",
+    "word": "sposa!"
+  },
+  {
+    "frequency": 0.0026,
+    "riqi": "8?，?",
+    "word": "Finfisher"
+  },
+  {
+    "frequency": 0.0023,
+    "riqi": "8?，?",
+    "word": "owned"
+  },
+  {
+    "frequency": 0.002,
+    "riqi": "8?，?",
+    "word": "Journal"
+  },
+  {
+    "frequency": 0.0018,
+    "riqi": "8?，?",
+    "word": "article:"
+  },
+  {
+    "frequency": 0.0018,
+    "riqi": "8?，?",
+    "word": "Gamma"
+  },
+  {
+    "frequency": 0.0017,
+    "riqi": "8?，?",
+    "word": "Max"
+  },
+  {
+    "frequency": 0.0015,
+    "riqi": "8?，?",
+    "word": "situation!"
+  },
+  {
+    "frequency": 0.0012,
+    "riqi": "8?，?",
+    "word": "LATIN"
+  },
+  {
+    "frequency": 0.0012,
+    "riqi": "8?，?",
+    "word": "critical"
+  },
+  {
+    "frequency": 0.0011,
+    "riqi": "9?，?",
+    "word": "***9843S0"
+  },
+  {
+    "frequency": 0.0011,
+    "riqi": "9?，?",
+    "word": "<<#1427993-49043055#>>"
+  },
+  {
+    "frequency": 0.001,
+    "riqi": "9?，?",
+    "word": "Gmail"
+  },
+  {
+    "frequency": 0.001,
+    "riqi": "9?，?",
+    "word": "million"
+  },
+  {
+    "frequency": 0.001,
+    "riqi": "9?，?",
+    "word": "passwords"
+  },
+  {
+    "frequency": 0.001,
+    "riqi": "9?，?",
+    "word": "Settembre"
+  },
+  {
+    "frequency": 8.0E-4,
+    "riqi": "9?，?",
+    "word": "furlan"
+  },
+  {
+    "frequency": 8.0E-4,
+    "riqi": "9?，?",
+    "word": "Bagno"
+  },
+  {
+    "frequency": 8.0E-4,
+    "riqi": "9?，?",
+    "word": "Presentaci???n"
+  },
+  {
+    "frequency": 7.0E-4,
+    "riqi": "9?，?",
+    "word": "[!DBG-996-67783]:"
+  },
+  {
+    "frequency": 0.0019,
+    "riqi": "10?，?",
+    "word": "Yosemite?"
+  },
+  {
+    "frequency": 0.001,
+    "riqi": "10?，?",
+    "word": "SEPYF"
+  },
+  {
+    "frequency": 0.001,
+    "riqi": "10?，?",
+    "word": "Client-Training"
+  },
+  {
+    "frequency": 9.0E-4,
+    "riqi": "10?，?",
+    "word": "ROP"
+  },
+  {
+    "frequency": 8.0E-4,
+    "riqi": "10?，?",
+    "word": "6!"
+  },
+  {
+    "frequency": 8.0E-4,
+    "riqi": "10?，?",
+    "word": "WebWatcher"
+  },
+  {
+    "frequency": 8.0E-4,
+    "riqi": "10?，?",
+    "word": "MESSAGE"
+  },
+  {
+    "frequency": 8.0E-4,
+    "riqi": "10?，?",
+    "word": "[WARNING:"
+  },
+  {
+    "frequency": 8.0E-4,
+    "riqi": "10?，?",
+    "word": "shehata"
+  },
+  {
+    "frequency": 7.0E-4,
+    "riqi": "10?，?",
+    "word": "Pasticcini"
+  },
+  {
+    "frequency": 0.0017,
+    "riqi": "11?，?",
+    "word": "male."
+  },
+  {
+    "frequency": 0.0017,
+    "riqi": "11?，?",
+    "word": "fumo"
+  },
+  {
+    "frequency": 0.0015,
+    "riqi": "11?，?",
+    "word": "Martinez"
+  },
+  {
+    "frequency": 0.001,
+    "riqi": "11?，?",
+    "word": "to:"
+  },
+  {
+    "frequency": 9.0E-4,
+    "riqi": "11?，?",
+    "word": "trasporti"
+  },
+  {
+    "frequency": 9.0E-4,
+    "riqi": "11?，?",
+    "word": "impossibili"
+  },
+  {
+    "frequency": 8.0E-4,
+    "riqi": "11?，?",
+    "word": "9.5"
+  },
+  {
+    "frequency": 8.0E-4,
+    "riqi": "11?，?",
+    "word": "Bull:"
+  },
+  {
+    "frequency": 7.0E-4,
+    "riqi": "11?，?",
+    "word": "Yucatan"
+  },
+  {
+    "frequency": 7.0E-4,
+    "riqi": "11?，?",
+    "word": "(POC"
+  },
+  {
+    "frequency": 0.0019,
+    "riqi": "12?，?",
+    "word": "calendar"
+  },
+  {
+    "frequency": 0.0019,
+    "riqi": "12?，?",
+    "word": "9.5"
+  },
+  {
+    "frequency": 0.0012,
+    "riqi": "12?，?",
+    "word": "Phantom"
+  },
+  {
+    "frequency": 0.0012,
+    "riqi": "12?，?",
+    "word": "Policies"
+  },
+  {
+    "frequency": 0.0011,
+    "riqi": "12?，?",
+    "word": "QJX-198-79423"
+  },
+  {
+    "frequency": 0.0011,
+    "riqi": "12?，?",
+    "word": "JASMINE"
+  },
+  {
+    "frequency": 0.001,
+    "riqi": "12?，?",
+    "word": "Natale"
+  },
+  {
+    "frequency": 9.0E-4,
+    "riqi": "12?，?",
+    "word": "MACC"
+  },
+  {
+    "frequency": 8.0E-4,
+    "riqi": "12?，?",
+    "word": "Christmas"
+  },
+  {
+    "frequency": 8.0E-4,
+    "riqi": "12?，?",
+    "word": "Leicester"
+  }
+]
